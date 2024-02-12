@@ -9,6 +9,7 @@ export function MyForm(){
     })
 
  function handleDataChange(event){
+    event.preventDefault()
     const name= event.target.name
     const value=  event.target.value
     const checked= event.target.checked
@@ -36,15 +37,15 @@ export function MyForm(){
 }
 
 return(
-    <div>
+    <form>
         <h1>Il Mio form</h1>
         <input name="Username" value={data.username} onChange={handleDataChange} />
         <input name="password" type="password" value={data.password} onChange={handleDataChange} />
-        <input type="checkbox" name="session" checked={data.session} onChange={handleDataChange}/>
-        <button disabled={!data.username || !data.password}>Log IN</button>
+        <input type="checkbox" name="session" checked={data.session} onChange={handleDataChange}/><span>remember</span>
+        <button disabled={!data.username || !data.password}>Log In</button>
         <button onClick={Resetform}>Reset</button>
       
-    </div>
+    </form>
 )
 
 }
