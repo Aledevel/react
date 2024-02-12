@@ -1,6 +1,7 @@
 export function MouseClick(){
     function handleClick(event){
         event.preventDefault()
+        console.log(event.currentTarget.src)
         console.log(event.currentTarget.name)
 
     }
