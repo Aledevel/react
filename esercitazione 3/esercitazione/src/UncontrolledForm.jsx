@@ -1,14 +1,14 @@
 export function UncontrolledForm(){
     function handleSubmit(event){
         event.preventDefault()
-      const Username=  event.target.elements.namedItem('username').value
-      const Password=  event.target.elements.namedItem('password').value
-      const sessione=  event.target.elements.namedItem('session').checked
-    
+    //   const Username=  event.target.elements.namedItem('username').value
+    //   const Password=  event.target.elements.namedItem('password').value
+    //   const sessione=  event.target.elements.namedItem('session').checked
+       const formData = new FormData(event.target)
       const data = {
-        Username,
-        Password,
-        sessione
+        Username: formData.get('username'),
+        Password:formData.get('password'),
+        sessione:formData.get('session') === 'on'? true:false
       }
     }
 

@@ -1,11 +1,12 @@
 import { Header } from "./Header"
 import { Image } from "./Image"
 import { Footer } from "./Footer"
-import { Counter } from "./Counter"
-import { Visibility } from "./Visibility"
-import { GeolocationViewer } from "./GeolocationViewer"
-import { MouseClick } from "./MouseClick"
+// import { Counter } from "./Counter"
+// import { Visibility } from "./Visibility"
+// import { GeolocationViewer } from "./GeolocationViewer"
+// import { MouseClick } from "./MouseClick"
 import { Clock } from "./Clock"
+import { UncontrolledForm } from "./UncontrolledForm"
 
 export function App(){
     return(
@@ -14,10 +15,11 @@ export function App(){
            <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png"  />
            <Footer/>
            <Clock/>
-           <Counter />
+           {/* <Counter />
           <Visibility />
           <GeolocationViewer />
-          <MouseClick/>
+          <MouseClick/> */}
+          <UncontrolledForm/>
         </div>
     )
 }
