@@ -10,6 +10,7 @@ export function UncontrolledForm(){
         Password:formData.get('password'),
         sessione:formData.get('session') === 'on'? true:false
       }
+      console.log(data)
     }
 
     return(
