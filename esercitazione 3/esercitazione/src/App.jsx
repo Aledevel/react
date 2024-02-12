@@ -4,6 +4,7 @@ import { Footer } from "./Footer"
 import { Counter } from "./Counter"
 import { Visibility } from "./Visibility"
 import { GeolocationViewer } from "./GeolocationViewer"
+import { MouseClick } from "./MouseClick"
 
 export function App(){
     return(
@@ -14,6 +15,7 @@ export function App(){
            <Counter />
           <Visibility />
           <GeolocationViewer />
+          <MouseClick/>
         </div>
     )
 }
