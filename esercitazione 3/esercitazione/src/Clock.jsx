@@ -17,7 +17,7 @@ export function Clock(){
     }, [])
     return(
         <div>
-            <p>l'ora attuale è {date.toLocaleTimeString()}</p>
+            <h2>l'ora attuale è {date.toLocaleTimeString()}</h2>
         </div>
     )
 }
