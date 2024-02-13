@@ -1,7 +1,7 @@
-import { Header } from "./Header"
-import { Image } from "./Image"
-import { Footer } from "./Footer"
-import { Counter } from "./Counter"
+// import { Header } from "./Header"
+// import { Image } from "./Image"
+// import { Footer } from "./Footer"
+// import { Counter } from "./Counter"
 import { MyForm } from "./MyForm"
 // import { Visibility } from "./Visibility"
 // import { GeolocationViewer } from "./GeolocationViewer"
@@ -9,10 +9,10 @@ import { MyForm } from "./MyForm"
 export function App(){
     return(
         <div>
-          <Header/> 
+          {/* <Header/> 
            <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png"  />
            <Footer/>
-           <Counter />
+           <Counter /> */}
           <MyForm/> 
           {/* <Visibility />
           <GeolocationViewer /> */}
