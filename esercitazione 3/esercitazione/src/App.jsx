@@ -8,7 +8,9 @@ import { Image } from "./Image"
 import { Clock } from "./Clock"
 // import { UncontrolledForm } from "./UncontrolledForm"
 // import { List } from "./List"
-import { TodoList } from "./TodoList"
+// import { TodoList } from "./TodoList"
+// import { Saluto } from "./Saluto"
+import { Comparatore } from "./Comparatore"
 
 export function App(){
     return(
@@ -23,7 +25,9 @@ export function App(){
           <MouseClick/> */}
           {/* <UncontrolledForm/> */}
           {/* <List colors={[{id:1,name:"Blue"},{id:2,name:"red"},  {id:3,name:"green"}, {id:4,name:"orange"}, ]}/> */}
-          <TodoList/>
+          {/* <TodoList/> */}
+          {/* <Saluto/> */}
+          <Comparatore/>
         </div>
     )
 }

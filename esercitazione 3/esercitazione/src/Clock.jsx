@@ -6,9 +6,7 @@ export function Clock(){
 
     useEffect(()=>{
         console.log('setting the clock')
-        const intervalID= setInterval(()=>{
-            setDate(new Date())
-        },1000)
+        const intervalID= setInterval(()=>{  setDate(new Date())},1000)
 
         return ()=>{
             console.log('clearing clock')
