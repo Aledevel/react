@@ -15,6 +15,7 @@ export function TodoList() {
 		}
 	return (
 		<div>
+			<h1>To Do List</h1>
 			<form onSubmit={handleAddTodo}>
 				<input data-testid="todo-input" name="todo" />
 				<button type="submit">Add</button>

@@ -7,7 +7,7 @@
 // import { MouseClick } from "./MouseClick"
 // import { Clock } from "./Clock"
 // import { UncontrolledForm } from "./UncontrolledForm"
-// import { List } from "./List"
+import { List } from "./List"
 import { TodoList } from "./TodoList"
 
 export function App(){
@@ -22,7 +22,7 @@ export function App(){
           <GeolocationViewer />
           <MouseClick/> */}
           {/* <UncontrolledForm/> */}
-          {/* <List colors={[{id:1,name:"Blue"},{id:2,name:"red"},  {id:3,name:"green"}, {id:4,name:"orange"}, ]}/> */}
+          <List colors={[{id:1,name:"Blue"},{id:2,name:"red"},  {id:3,name:"green"}, {id:4,name:"orange"}, ]}/>
           <TodoList/>
         </div>
     )
