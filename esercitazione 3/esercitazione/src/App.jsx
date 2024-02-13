@@ -3,8 +3,8 @@ import { Image } from "./Image"
 import { Footer } from "./Footer"
 import { Counter } from "./Counter"
 import { MyForm } from "./MyForm"
-// import { Visibility } from "./Visibility"
-// import { GeolocationViewer } from "./GeolocationViewer"
+import { Visibility } from "./Visibility"
+import { GeolocationViewer } from "./GeolocationViewer"
 import { MouseClick } from "./MouseClick"
 import { Clock } from "./Clock"
 import { UncontrolledForm } from "./UncontrolledForm"
@@ -22,6 +22,7 @@ export function App(){
                   <Footer/>
                   <Clock/>
                   <Counter />
+                  <MyForm/>
            </div>
            <div>
                 <Visibility />
