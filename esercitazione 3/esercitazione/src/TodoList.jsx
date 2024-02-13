@@ -10,7 +10,9 @@ export function TodoList() {
 
 		setTodos((todos) => [...todos, todo])
 	}
-
+		function HandleResetTodo(){
+			setTodos([])
+		}
 	return (
 		<div>
 			<form onSubmit={handleAddTodo}>
@@ -19,7 +21,7 @@ export function TodoList() {
 			</form>
 
 			<ul data-testid="todo-list">
-				{todos.map((todo, index) => (<li key={index}> {todo} </li>))}
+				{todos.map((todo, index) => (<li key={index}> {todo} <button type='reset' onClick={HandleResetTodo} >Remove</button> </li>))}
 			</ul>
 		</div>
 	)
@@ -28,3 +30,6 @@ export function TodoList() {
 // The todos state variable should be an array of strings.
 // The TodoList component should also contain an input tag and a button.
 // When the button is clicked, the event handler should add the value of the input tag to the todos array.
+// Add a "reset" button that clears the todos array when clicked.
+// Modify the TodoList by adding a "remove" button to each li tag.
+// When clicked, the event handler should remove corresponding item from the todos array.
