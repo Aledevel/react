@@ -18,6 +18,7 @@ export function TodoList() {
 			<form onSubmit={handleAddTodo}>
 				<input data-testid="todo-input" name="todo" />
 				<button type="submit">Add</button>
+				<button type='reset' onClick={HandleResetTodo} >Remove All</button>
 			</form>
 
 			<ul data-testid="todo-list">
