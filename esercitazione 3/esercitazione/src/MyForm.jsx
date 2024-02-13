@@ -16,16 +16,9 @@ export function MyForm(){
     const type = event.target.type
     
     setData((data) =>{
-         
-            return{
-            ...data,
-            [name]: type ==='checkbox'?checked:value,
-        }
-        
-    })
-
-    
-    setData(value)
+            return{...data,[name]: type ==='checkbox'?checked:value,  }})
+             
+            setData(value)
  }
 
  function Resetform(){
