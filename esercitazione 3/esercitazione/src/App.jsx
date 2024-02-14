@@ -16,7 +16,7 @@ import { Comparatore } from "./Comparatore"
 export function App(){
     return(
         <div>
-          <div>
+          <div >
                 <Header/> 
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png"  />
                   <Footer/>
