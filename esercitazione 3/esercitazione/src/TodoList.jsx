@@ -22,7 +22,7 @@ export function TodoList() {
 				<button type='reset' onClick={HandleResetTodo} >Remove All</button>
 			</form>
 
-			<ul data-testid="todo-list">
+			<ul data-testid="todo-list" className='List'>
 				{todos.map((todo, index) => (<li key={index}> {todo} <button type='reset' onClick={HandleResetTodo} >Remove</button> </li>))}
 			</ul>
 		</div>
