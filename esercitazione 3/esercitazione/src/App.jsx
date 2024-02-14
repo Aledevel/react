@@ -18,7 +18,7 @@ import { Welcome } from "./Welcome";
 export function App(){
     return(
         <div >
-          <Welcome className={Welcome} name={"Bernard"}/>
+          <Welcome className= "Welcome" name={"Bernard"}/>
           {/* <div >
                 <Header/> 
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png"  />

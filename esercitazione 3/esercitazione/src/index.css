@@ -1,6 +1,6 @@
 .Welcome{
-    display: flex;
-    flex-direction: column;
-    background-color: red;
-    border : 2px solid maroon;
+    background-color : red;
+    color: white;
+    text-decoration:underline;
+    border:2px solid black;
 }
