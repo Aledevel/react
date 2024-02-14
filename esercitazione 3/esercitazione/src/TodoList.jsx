@@ -13,6 +13,9 @@ export function TodoList() {
 		function HandleResetTodo(){
 			setTodos([])
 		}
+		function HandleRemoveTodo(index){
+			setTodos((todos)=>todos.filter((t,i)=> i !== index))
+		}
 	return (
 		<div>
 			<h1>To Do List</h1>
@@ -23,7 +26,7 @@ export function TodoList() {
 			</form>
 
 			<ul data-testid="todo-list" className='List'>
-				{todos.map((todo, index) => (<li key={index}> {todo} <button type='reset' onClick={HandleResetTodo} >Remove</button> </li>))}
+				{todos.map((todo, index) => (<li key={index}> {todo} <button onClick={()=>HandleRemoveTodo(index)} >Remove</button> </li>))}
 			</ul>
 		</div>
 	)
