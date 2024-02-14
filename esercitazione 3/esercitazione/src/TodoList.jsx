@@ -14,9 +14,9 @@ export function TodoList() {
 			setTodos([])
 		}
 	return (
-		<div>
-			<form onSubmit={handleAddTodo}>
-				<input data-testid="todo-input" name="todo" />
+		<div className="flex flex-col bg-slate-300 gap-2 h-40 w-60 " >
+			<form onSubmit={handleAddTodo} >
+				<input  data-testid="todo-input" name="todo" className='bg-white border-slate-600' />
 				<button type="submit">Add</button>
 				<button type='reset' onClick={HandleResetTodo} >Remove All</button>
 			</form>
