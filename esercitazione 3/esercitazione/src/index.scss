@@ -1,4 +1,28 @@
 
 .clock {
-    border: 3px solid saddlebrown;
+    border: 3px solid rgb(209, 144, 98);
+}
+
+.appContainer{
+    background-color: rgb(243, 233, 233);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px ;
+    border: 2px solid rgb(169, 2, 2);
+}
+.InputLabel{
+    border: 2px solid rgb(152, 145, 145);
+}
+.button{
+    padding: 5px;
+    border-radius: 8px;
+    color: rgba(255, 106, 0, 0.875);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(129, 126, 126);
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(97, 97, 250);
 }

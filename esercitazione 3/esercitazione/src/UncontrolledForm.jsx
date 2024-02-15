@@ -22,11 +22,11 @@ export function UncontrolledForm(){
     return(
         <form onSubmit={handleSubmit}>
             <h1>This is the Uncontrolled one </h1>
-            {<input type="text"/*ref={inRef}*/ /> }
-            <input type="password" />
-            <input type="checkbox" />
-            <button>Log In</button>
-            <button type="reset"> Reset</button>
+            {<input className="InputLabel" type="text"/*ref={inRef}*/ /> }
+            <input className="InputLabel" type="password" />
+            <input className="InputLabel" type="checkbox" />
+            <button className="button">Log In</button>
+            <button className="button" type="reset"> Reset</button>
         </form>
     )
 }

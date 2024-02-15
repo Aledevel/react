@@ -12,10 +12,11 @@ import { List } from "./List"
 import { TodoList } from "./TodoList"
 import { Saluto } from "./Saluto"
 import { Comparatore } from "./Comparatore"
+import { Container } from "./Container"
 
 export function App(){
     return(
-        <div >
+       <Container title={ <h1>Questi sono i miei esercizi</h1>}>
           <div  >
                 <Header /> 
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png" />
@@ -24,6 +25,7 @@ export function App(){
                   <Counter />
                   <MyForm/>
            </div>
+         
            <div>
                 <Visibility />
                 <GeolocationViewer />
@@ -33,7 +35,7 @@ export function App(){
                 <TodoList/>
                  <Saluto/>
                 <Comparatore/>
-          </div>
-        // </div>
+            </div>
+        </Container> 
     )
 }

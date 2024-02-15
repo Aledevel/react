@@ -7,7 +7,7 @@ export function MouseClick(){
     }
     return(
         <div>
-            <button name="one" onClick={handleClick}>
+            <button className="button "name="one" onClick={handleClick}>
                 <img  height={26} width={34} src="#"></img>
                 e cliccami!</button>
         </div>

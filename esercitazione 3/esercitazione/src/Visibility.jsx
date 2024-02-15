@@ -11,8 +11,8 @@ const  [niente, appari] = useState(false)
 
     return(
         <div>
-       {niente && <h1>Buuuu</h1>}
-         <button onClick={handleAppear}>appear</button>
+       {niente && <h1 className=" text-6xl">Buuuu</h1>}
+         <button className="button" onClick={handleAppear}>appear</button>
         </div>
     )
     }
