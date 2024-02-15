@@ -13,9 +13,21 @@ import { TodoList } from "./TodoList"
 import { Saluto } from "./Saluto"
 import { Comparatore } from "./Comparatore"
 import { Container } from "./Container"
-
+import { LanguageContext } from "./LanguageContext"
+import { useState } from "react"
 export function App(){
-    return(
+ 
+  const [language,setLanguage]= useState('en')
+
+  function handleSetLanguage(language){setLanguage(language) }
+
+ return(
+  <div>
+    <button className="button" onClick={()=>handleSetLanguage('it')}>IT</button>
+
+    <button className="button" onClick={()=>handleSetLanguage('en')}>EN</button>
+
+<LanguageContext.Provider value={language}>
        <Container title={ <h1>Questi sono i miei esercizi</h1>}>
           <div  >
                 <Header /> 
@@ -37,5 +49,8 @@ export function App(){
                 <Comparatore/>
             </div>
         </Container> 
-    )
+  </LanguageContext.Provider>
+   </div> 
+ )
+
 }
