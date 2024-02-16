@@ -15,6 +15,8 @@ import { Comparatore } from "./Comparatore"
 import { Container } from "./Container"
 import { LanguageContext } from "./LanguageContext"
 import { useState } from "react"
+import { DataFetch } from "./FetchUse"
+
 export function App(){
  
   const [language,setLanguage]= useState('en')
@@ -30,7 +32,7 @@ export function App(){
 <LanguageContext.Provider value={language}>
        <Container title={ <h1>Questi sono i miei esercizi</h1>}>
           <div  >
-            <FetchUse user={AleDevel}/>
+            <DataFetch username="AleDevel"/>
                 <Header /> 
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png" />
                   <Footer/>
