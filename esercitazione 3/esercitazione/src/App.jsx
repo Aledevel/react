@@ -1,21 +1,23 @@
-import { Header } from "./Header"
-import { Image } from "./Image"
-import { Footer } from "./Footer"
-import { Counter } from "./Counter"
-import { Visibility } from "./Visibility"
-import { GeolocationViewer } from "./GeolocationViewer"
-import { MouseClick } from "./MouseClick"
-import { Clock } from "./Clock"
-import { UncontrolledForm } from "./UncontrolledForm"
-import { List } from "./List"
-import { TodoList } from "./TodoList"
-import { Saluto } from "./Saluto"
-import { Comparatore } from "./Comparatore"
+// import { Header } from "./Header"
+// import { Image } from "./Image"
+// import { Footer } from "./Footer"
+// import { Counter } from "./Counter"
+// import { Visibility } from "./Visibility"
+// import { GeolocationViewer } from "./GeolocationViewer"
+// import { MouseClick } from "./MouseClick"
+// import { Clock } from "./Clock"
+// import { UncontrolledForm } from "./UncontrolledForm"
+// import { List } from "./List"
+// import { TodoList } from "./TodoList"
+// import { Saluto } from "./Saluto"
+// import { Comparatore } from "./Comparatore"
+import { PaswordControl } from "./PasswordControl"
 
 export function App(){
     return(
         <div>
-          <div>
+          <PaswordControl/>
+          {/* <div>
                 <Header/> 
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png"  />
                   <Footer/>
@@ -31,7 +33,7 @@ export function App(){
                 <TodoList/>
                 <Saluto/>
                 <Comparatore/>
-          </div>
+          </div> */}
         </div>
     )
 }
