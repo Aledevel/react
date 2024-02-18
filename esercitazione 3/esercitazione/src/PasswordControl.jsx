@@ -6,7 +6,7 @@ export function PaswordControl() {
   const [confirm,SetConfirm]=useState("")
 
   function HandleEventInput1(e){
-    const password1 = e.target.value 
+    const password1 = e.target.value            
     SetPassword(password1)
   }
   function HandleEventInput2(e){
