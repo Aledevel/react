@@ -32,7 +32,7 @@ export function App(){
 <LanguageContext.Provider value={language}>
        <Container title={ <h1>Questi sono i miei esercizi</h1>}>
           <div  >
-            <DataFetch username="AleDevel"/>
+            <DataFetch />
                 <Header /> 
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png" />
                   <Footer/>
