@@ -1,39 +1,14 @@
-import { useEffect, useState } from "react";
 
+import { FetchUse } from "./useFetch";
 export function DataFetch(){
-  const [data, setData] = useState(null)
-  const [user,setUser]=useState({})
- 
-  function handleInput(event){
-    const utente = event.target.value 
-   setData(utente)
-  
-  }
 
-        async function FetchData(e){
-            try {
-                e.preventDefault()
-                const call = await fetch(`https://api.github.com/users/${data}`)
-                const response= await call.json()
-                
-                setUser({response})
-                console.log(user)
-               
-              
-                
-            } catch (error) {
-                console.log(error)
-                
-            }
-        }
- 
-    useEffect(()=>{},[data])
- 
-
+    const {input, chiamata}= FetchUse()
+    
+FetchUse
  return(
     <div>
-    <form onSubmit={(e)=>FetchData(e)}>
-        <input type="text" value={data} onChange={(e)=>handleInput(e)}  />
+    <form onSubmit={(e)=>input(e)}>
+        <input type="text" value={data} onChange={(e)=>chiamata(e)}  />
         <button type="submit" >Cerca l'utente</button>
     </form>
     
