@@ -1,17 +1,15 @@
-import { useState } from "react";
 
+import { usecounter } from "./UseCounter";
 
 export function Counter (){
-        const [contatore,setcontatore]= useState(0);
- 
-        function handleCounterIncrement(){
-            setcontatore( contatore +1)
-        }
-   
+    const {contatore, incrementa, decrementa}= usecounter()
+
+       
     return(
         <div>
         <h2>il valore è {contatore}</h2>
-        <button onClick={handleCounterIncrement} >Incrementa</button>
+        <button onClick={incrementa} >Incrementa</button>
+        <button onClick={ decrementa} >decrementa</button>
         </div>
     )
 } 
