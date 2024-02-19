@@ -8,8 +8,8 @@ export function Counter (){
     return(
         <div>
         <h2>il valore è {contatore}</h2>
-        <button onClick={incrementa} >Incrementa</button>
-        <button onClick={ decrementa} >decrementa</button>
+        <button className="button" onClick={incrementa} >Incrementa</button>
+        <button className="button" onClick={ decrementa} >decrementa</button>
         </div>
     )
 } 
