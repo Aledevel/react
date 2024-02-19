@@ -1,40 +1,48 @@
 import { useEffect, useState } from "react";
 
 export function DataFetch(){
-    
-    const[user,setUser]= useState(null);
-    const [error,setError]=useState(null);
+  const [data, setData] = useState(null)
+  const [user,setUser]=useState({})
+ 
+  function handleInput(event){
+    const utente = event.target.value 
+   setData(utente)
+  
+  }
 
-
-    function HandleChange(event){
-        event.preventDefault()
-     const username =  event.target.value  
-     return username
-    }
-
-    function handleSubmit(username){
-        setUser(username)
-
-    async function fetchData(username){
-        try {
-            const response =  await fetch(`https://api.github.com/users/${username}`)
-            const data= await response.json()   
-            console.log(data)
-            setUser(data)  
-        } catch (error) {
-            setError(error)   
-        }     
-    }
-     useEffect(()=>{ fetchData(username) },[username])
-}
+        async function FetchData(e){
+            try {
+                e.preventDefault()
+                const call = await fetch(`https://api.github.com/users/${data}`)
+                const response= await call.json()
+                
+                setUser({response})
+                console.log(user)
+               
+              
+                
+            } catch (error) {
+                console.log(error)
+                
+            }
+        }
+ 
+    useEffect(()=>{},[data])
+ 
 
  return(
     <div>
-        <input type="text" value="" onChange={HandleChange} />
-        <button onClick={handleSubmit}>Cerca</button>
-        {error && <h1>there has been an error </h1>}
-        {user && <h1>{`${user.login} ${user.id}  ${user.url}`}</h1>}
+    <form onSubmit={(e)=>FetchData(e)}>
+        <input type="text" value={data} onChange={(e)=>handleInput(e)}  />
+        <button type="submit" >Cerca l'utente</button>
+    </form>
+    
+        { user && <ul> <li>{user.response.login}</li> <li>{user.response.id}</li> <li>{user.response.url}</li> </ul>}
     </div>
  )
 }
     
+// Starting from the previous exercise, create a new GithubUsers component that has a form with a text input and a submit button.
+// The input will be used for searching a user by providing their username.
+// Each user will be displayed in a list, where each list item is a GithubUser component.
+// These components will take username as a prop.
