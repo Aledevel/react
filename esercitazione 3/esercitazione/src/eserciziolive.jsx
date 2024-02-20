@@ -45,9 +45,7 @@ export const UserProfile = () => {
       // Fetch user data based on the user ID
       const fetchUserData = async () => {
         try {
-          const response = await fetch(
-            https://jsonplaceholder.typicode.com/users/${idValue}
-          );
+          const response = await fetch( `https://jsonplaceholder.typicode.com/users/${idValue}` );
           const userData = await response.json();
           setUser(userData);
         } catch (error) {

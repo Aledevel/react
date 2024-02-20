@@ -5,6 +5,7 @@ export function DataFetch(){
   const [user,setUser]=useState({})
  
   function handleInput(event){
+    event.preventDefault()
     const utente = event.target.value 
    setData(utente)
   
