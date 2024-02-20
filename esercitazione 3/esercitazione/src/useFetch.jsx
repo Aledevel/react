@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+
 export function FetchUse(){
    
     const [data, setData] = useState(null)
@@ -25,11 +27,10 @@ export function FetchUse(){
         }
  
     useEffect(()=>{},[data])
-    return{
-        input: handleInput(e),
-        chiamata:FetchData(e),
-        errore:error
 
+    return{
+        dati: data,
+        chiamata:user,
     }
     
 }

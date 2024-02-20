@@ -17,6 +17,8 @@ import { LanguageContext } from "./LanguageContext"
 import { useState } from "react"
 import { DataFetch } from "./FetchUse"
 
+// import { EsercizioLive } from "./eserciziolive"
+
 export function App(){
  
   const [language,setLanguage]= useState('en')
@@ -27,8 +29,8 @@ export function App(){
   <div>
     <button className="button" onClick={()=>handleSetLanguage('it')}>IT</button>
 
-    <button className="button" onClick={()=>handleSetLanguage('en')}>EN</button>
-
+    <button className="button" onClick={()=>handleSetLanguage('en')}>EN</button> 
+ 
 <LanguageContext.Provider value={language}>
        <Container title={ <h1>Questi sono i miei esercizi</h1>}>
           <div  >
@@ -53,6 +55,7 @@ export function App(){
             </div>
         </Container> 
   </LanguageContext.Provider>
+  {/* <EsercizioLive/> */}
    </div> 
  )
 
