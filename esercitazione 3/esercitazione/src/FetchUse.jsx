@@ -32,7 +32,6 @@ export function DataFetch(){
     <div>
     <form >
         <input type="text" value={data} onChange={(e)=>handleInput(e)}  />
-        <button type="submit" onClick={(e)=>FetchData(e)} >Cerca l'utente</button>
     </form>
     
         { user && <ul> <li>{user?.login}</li> <li>{user?.id}</li> <li>{user?.url}</li> </ul>}
