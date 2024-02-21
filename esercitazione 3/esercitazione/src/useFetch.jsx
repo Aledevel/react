@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react"
 
-export default function DataFetch(){
+export  function useFetch(){
   const [data, setData] = useState(null)
-  const [user,setUser]=useState({})
+  const [user,setUser]=useState(null)
  
+  
   function handleInput(event){
     event.preventDefault()
     const utente = event.target.value 
-   setData(utente)
-  
-  }
+   setData(utente) 
+ }
+
   useEffect(()=>{
       async function FetchData(){
             try {
@@ -29,9 +30,10 @@ export default function DataFetch(){
     },[data])
  
 return{
-    funzionericevente: handleInput(),
-    user:user(),
-
+   
+data:data,
+user:user,
+   input:handleInput
 }
     
 }

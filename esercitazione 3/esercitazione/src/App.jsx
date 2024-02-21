@@ -13,9 +13,10 @@
 // import { Saluto } from "./Saluto"
 // import { Comparatore } from "./Comparatore"
 import { Container } from "./Container"
+import { FetchHook } from "./FetchUse"
 import { LanguageContext } from "./LanguageContext"
 import { useState } from "react"
-import { DataFetch } from "./FetchUse"
+
 
 export function App(){
  
@@ -32,7 +33,7 @@ export function App(){
 <LanguageContext.Provider value={language}>
        <Container title={ <h1>Questi sono i miei esercizi</h1>}>
           <div  >
-            <DataFetch />
+            <FetchHook />
                 {/* <Header /> 
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/9/96/Google_web_search.png" />
                   <Footer/>
