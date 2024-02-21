@@ -1,36 +1,37 @@
 import { useEffect, useState } from "react"
 
-export function FetchUse(){
-   
-    const [data, setData] = useState(null)
+export default function DataFetch(){
+  const [data, setData] = useState(null)
   const [user,setUser]=useState({})
  
   function handleInput(event){
+    event.preventDefault()
     const utente = event.target.value 
    setData(utente)
   
   }
-
-        async function FetchData(e){
+  useEffect(()=>{
+      async function FetchData(){
             try {
-                e.preventDefault()
+               
                 const call = await fetch(`https://api.github.com/users/${data}`)
                 const response= await call.json()
-                
-                setUser({response})
+                console.log(response)
+                setUser(response)
                 console.log(user)
-               
+                
             } catch (error) {
                 console.log(error)
                 
             }
         }
+        FetchData()
+    },[data])
  
-    useEffect(()=>{},[data])
+return{
+    funzionericevente: handleInput(),
+    user:user(),
 
-    return{
-        dati: data,
-        chiamata:user,
-    }
+}
     
 }
