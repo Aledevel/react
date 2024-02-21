@@ -1,43 +1,44 @@
 import { useEffect, useState } from "react";
 
-export function DataFetch(){
+
+export default function DataFetch(){
   const [data, setData] = useState(null)
   const [user,setUser]=useState({})
  
   function handleInput(event){
+    event.preventDefault()
     const utente = event.target.value 
    setData(utente)
-  
   }
-
-        async function FetchData(e){
+  
+  useEffect(()=>{
+      async function FetchData(){
             try {
-                e.preventDefault()
+               
                 const call = await fetch(`https://api.github.com/users/${data}`)
                 const response= await call.json()
-                
-                setUser({response})
+                console.log(response)
+                setUser(response)
                 console.log(user)
-               
-              
                 
             } catch (error) {
                 console.log(error)
                 
             }
         }
+        FetchData()
+    },[data])
  
-    useEffect(()=>{},[data])
  
 
  return(
     <div>
-    <form onSubmit={(e)=>FetchData(e)}>
+    <form >
         <input type="text" value={data} onChange={(e)=>handleInput(e)}  />
         <button type="submit" >Cerca l'utente</button>
     </form>
     
-        { user && <ul> <li>{user.response.login}</li> <li>{user.response.id}</li> <li>{user.response.url}</li> </ul>}
+        { user && <ul> <li>{user?.login}</li> <li>{user?.id}</li> <li>{user?.url}</li> </ul>}
     </div>
  )
 }
