@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-
-export  function DataFetch(){
+export function DataFetch(){
   const [data, setData] = useState(null)
   const [user,setUser]=useState({})
  
@@ -9,8 +8,8 @@ export  function DataFetch(){
     event.preventDefault()
     const utente = event.target.value 
    setData(utente)
-  }
   
+  }
   useEffect(()=>{
       async function FetchData(){
             try {
@@ -28,22 +27,19 @@ export  function DataFetch(){
         }
         FetchData()
     },[data])
- 
- 
+
+//  import {DataFetch}   from "./useFetch"
+
+// export function fetchHook (){
+//  const   {funzionericevente, user}= DataFetch(e)
 
  return(
     <div>
     <form >
         <input type="text" value={data} onChange={(e)=>handleInput(e)}  />
-        <button type="submit" >Cerca l'utente</button>
     </form>
     
         { user && <ul> <li>{user?.login}</li> <li>{user?.id}</li> <li>{user?.url}</li> </ul>}
     </div>
  )
 }
-    
-// Starting from the previous exercise, create a new GithubUsers component that has a form with a text input and a submit button.
-// The input will be used for searching a user by providing their username.
-// Each user will be displayed in a list, where each list item is a GithubUser component.
-// These components will take username as a prop.
