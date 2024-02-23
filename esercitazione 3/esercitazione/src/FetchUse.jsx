@@ -1,9 +1,11 @@
 
+import { useState } from "react"
 import { useParams } from "react-router-dom"
+import { useEffect } from "react"
 
 export function DataFetch(){
-
-const {username ='Aledevel'}= useParams()
+const [user, setUser]= useState(null)
+const {username}= useParams()
 
   useEffect(()=>{
       async function FetchData(){
@@ -21,14 +23,10 @@ const {username ='Aledevel'}= useParams()
             }
         }
         FetchData()
-    },[data])
+    },[username])
  return(
     <div>
-    <form >
-   
-    </form>
-    
-        { user && <ul> <li>{user?.login}</li> <li>{user?.id}</li> <li>{user?.url}</li> </ul>}
+        { user && <ul> <li><h1>{user?.login}</h1></li> <li><h2>{user?.id}</h2></li> <li><h3>{user?.url}</h3></li> </ul>}
     </div>
  )
 }
