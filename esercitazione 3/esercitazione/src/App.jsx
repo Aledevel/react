@@ -34,6 +34,7 @@ export function App(){
       <Route path="Fetch" element={<FetchHook/>}/>
       <Route path="ToDo" element={<TodoList/>}/>
       <Route path="Clock" element={<Clock/>}/>
+      <Route path="users/:username " element={<FetchHook/>}/>
    </Routes>
    </Container>
    </div> 
