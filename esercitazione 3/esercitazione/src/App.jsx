@@ -14,7 +14,8 @@ import { MyForm } from "./MyForm"
  import { Route, Routes } from "react-router-dom"
 import { Comparatore } from "./Comparatore"
 import { Container } from "./Container"
-import { DataFetch } from "./FetchUse"
+import { ShowGithubUser } from "./FetchUse"
+
 // import { LanguageContext } from "./LanguageContext"
 // import { useState } from "react"
 
@@ -34,9 +35,9 @@ export function App(){
       {/* <Route path="Fetch" element={<FetchHook/>}/> */}
       <Route path="ToDo" element={<TodoList/>}/>
       <Route path="Clock" element={<Clock/>}/>
-      <Route path="users/:username" element={<DataFetch/>}/>
+      <Route path="users/:username" element={<ShowGithubUser/>}/>
    </Routes>
-   </Container>
+   </Container> 
    </div> 
  )
 
