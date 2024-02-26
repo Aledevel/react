@@ -31,7 +31,7 @@ export function App(){
  return(
   <div>
     <Container>
-    <Link to='/'>Home Page</Link> | <Link to='/counter'>Counter</Link> | <Link to='/users'>GitHub user</Link> |
+    <Link to='/'>Home Page</Link> | <Link to='/ToDo'>Counter</Link> | <Link to='/users'>GitHub user</Link> |
    <Routes> 
       <Route path="/" element={<Comparatore/>}/>
       <Route path="Login" element={<MyForm/>}/>
