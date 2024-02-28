@@ -19,7 +19,7 @@ export function GithubuserList(){
     return(
         <>
             <ul>
-                {user.map((user)=>(<li key={user?.id}><Link to={`/users/${user.login}`}>{user.login}</Link></li>))}
+            {user.map((user)=>(<li key={user?.id}><Link to={`/users/${user?.login}`}>{user?.login}</Link></li>))}
             </ul>
             <Outlet/>
         </>
